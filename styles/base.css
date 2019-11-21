@@ -1,0 +1,64 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    height: 97%;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #8cffe1, #ffde4a, #ff5df6);
+    background-size: 600% 600%;
+
+    animation: backgroundMove 30s ease infinite;
+
+
+}
+
+div#container {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#gradient {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+div#gradient p {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+}
+
+a {
+    background: white;
+    mix-blend-mode: screen;
+    transition-duration: 0.4;
+    text-decoration: none;
+    color: black;
+    font-size: 0.75rem;
+    border-radius: 56px;
+    padding: 8px;
+}
+
+a:hover {
+    mix-blend-mode: normal;
+}
+
+@keyframes backgroundMove {
+    0%{background-position:17% 0%}
+    50%{background-position:84% 100%}
+    100%{background-position:17% 0%}
+}
