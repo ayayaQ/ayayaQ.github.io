@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+
 html {
     height: 100%;
     width: 100%;
@@ -12,23 +14,33 @@ body {
     margin: 0;
 }
 
+img.icon {
+    border-radius: 10%;
+    width: 50%;
+    max-width: 150px;
+}
+
 div#wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-auto-rows: minmax(100px, auto);
+    display: flex;
+    flex-flow: row wrap;
+    min-height: 100%;
+
     width: 100%;
+}
+
+div#wrapper > div {
+    min-width: 50%;
+    flex: 1;
+    
 }
 
 div.container {
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: stretch;
 }
-
-
-
-
 
 div.gradient {
     background: rgba(255, 255, 255, 0.5);
@@ -39,6 +51,7 @@ div.gradient {
     justify-content: center;
     flex-flow: column nowrap;
     border-radius: 5px;
+    width: 100%;
 }
 
 div.gradient p {
@@ -55,21 +68,13 @@ div.gradient p.subp {
 }
 
 #bio .gradient {
-    grid-column: 1;
-    grid-row: 1/4;
     justify-content: start;
 }
    
 #headproject .gradient {
-    grid-column: 1;
-    grid-row: 2;
     padding: 8px;
 }
-   
-#project1 {
-    grid-column: 1;
-    grid-row: 3;
-}
+
 
 a {
     background: white;
@@ -91,10 +96,6 @@ a:hover {
 
 ul li, p.button{
     transition-duration: 0.4s;
-}
-
-ul li:hover, p.button:hover {
-    
 }
 
 ul li:active, p.button:active {
@@ -121,7 +122,7 @@ div#header {
 
 div#header ul {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: center;
 
     max-height: 100%;
@@ -130,7 +131,7 @@ div#header ul {
 }
 
 ul li {
-    margin: 0px 8px;
+    margin: 8px 8px;
 }
 
 span {
@@ -138,4 +139,20 @@ span {
     font-weight: 900;
     color: white;
     margin: 16px;
+}
+
+@media only screen and (max-width: 500px) {
+    div#wrapper {
+        display: flex;
+        flex-flow: column;
+        min-height: 100%;
+    
+        width: 100%;
+    }
+    
+    div#wrapper > div {
+        min-width: 100%;
+        flex: 1;
+        
+    }
 }
